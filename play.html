@@ -1,0 +1,49 @@
+<html>
+<head>
+    <meta charset="UTF-8";>
+    <title>MUSIC PAGE</title>
+    <link rel="stylesheet" href="playstyles.css">
+    </head>
+    <body>
+        <div class="container">
+        <div class="navbar">
+            <img src="musiclogo.jpg" class ="logo">
+            <ul>
+                 <li><a href="#">HOME</a></li>
+                 <li><a href="#">ABOUT</a></li>
+                 <li><a href="#">POP-MUSIC</a></li>
+                 <li><a href="#">CLASSICAL</a></li>
+                 <li><a href="#">SONGOFTHEDAY</a></li>
+            </ul>
+        </div>
+        </div>
+         <div class="content">
+        <div class="leftone">
+            <h1>MUSIC<br> MOMENTS<br></h1>
+            <em><h3>Fill your soul crave with music!<br>Enjoy the wide range of music and let your inner soul thrive for it</h3></em>
+            </div>
+            <div class="rightone">
+                <p>Listen now</p>
+                 <img src="play.png" id="start">
+            
+            </div>
+        </div>
+    <audio id="song">
+        <source src="Shakira_-_Waka_Waka_FIFA_World_Cup_2010_Qoret.com.mp3" type="audio/mp3">
+        </audio>
+        <script >
+        var song=document.getElementById("song");
+        var start=document.getElementById("start");
+            start.onclick=function(){
+                if(song.paused)
+                    {
+                        song.play();
+                        start.src="pause1.png";
+                    }else{
+                    song.pause();
+                    start.src ="play.png";
+                }
+            }
+        </script>
+    </body>
+</html>
